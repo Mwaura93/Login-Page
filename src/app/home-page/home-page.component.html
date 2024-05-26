@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login Page</title>
+  <link rel="icon" type="image/jpg" href="../assets/icon.jpg">
+  <script>
+    
+  </script>
+</head>
+
+<body>
+
+  <form action="#" method="POST" onsubmit="Submit()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Emma" minlength="5" maxlength="10" required>
+    <br><br>
+    <label for="password">Password:</label>
+    <input type="text" id="password" placeholder="Emm#3578" minlength="10" maxlength="15" required>
+    <br><br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" placeholder="emma@gmail.com">
+    <br><br>
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" placeholder="01-23-456-789" pattern="\d{2}-\d{2}-\d{3}-\d{3}"
+      oninput="formatPhoneNumber(this)" required>
+    <br><br>
+    <label for="bday">Birthday:</label>
+    <input type="date" id="bday">
+    <br><br>
+    <label for="quantity">Quantity:</label>
+    <select id="quantity">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+    </select>
+    <br><br>
+    <label for="title">Title:</label>
+    <label for="mr">Mr.</label>
+    <input type="radio" id="mr" value="Mr" name="title">
+    <label for="mrs">Mrs.</label>
+    <input type="radio" id="mrs" value="Mrs" name="title">
+    <label for="phd">PhD.</label>
+    <input type="radio" id="phd" value="PhD" name="title">
+    <br><br>
+    <label for="Payment">Payment:</label>
+    <select id="Payment">
+      <option value="cash">cash</option>
+      <option value="mpesa">mpesa</option>
+      <option value="cheque">cheque</option>
+      <option value="mastercard">mastercard</option>
+    </select>
+    <br>
+    <button type="reset">Reset</button>
+    <br><br>
+    <button type="submit">Submit</button>
+    <div>
+      <h4>Employees Details</h4>
+<button type="button" name="button" (click)="getInfo1FromService()">Employee1</button>
+      <ul class="list-group">
+        <li *ngFor="let info of infoReceived1" class="list-group-item">{{info}}</li>
+      </ul>
+
+      <pre></pre>
+
+      <button type="button" name="button" (click)="getInfo2FromService()">Employee2</button>
+      <ul class="list-group">
+        <li *ngFor="let info of infoReceived2" class="list-group-item">{{info}}</li>
+      </ul>
+
+      <pre></pre>
+
+      <button type="button" name="button" (click)="getInfo3FromService()">Employee3</button>
+      <ul class="list-group">
+        <li *ngFor="let info of infoReceived3" class="list-group-item">{{info}}</li>
+      </ul>
+    </div>
